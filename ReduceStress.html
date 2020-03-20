@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    <h1>Stress Release Project</h1>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  
+  <p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'At Home')">At Home</button>
+  <button class="tablinks" onclick="openCity(event, 'Family')">Family</button>
+  <button class="tablinks" onclick="openCity(event, 'Pets')">Pets</button>
+  <button class="tablinks" onclick="openCity(event, 'Friends')">Friends</button>
+</div>
+
+<div id="At Home" class="tabcontent">
+  <p> <h3> At Home</h3> </p>
+  <p> Because we have to stay inside due to the coronavirus, most of my time and activities will be inside.
+  <h5> I like to do the following:</h5>
+    <pre> 
+      Watch TV and movies
+      Paint and draw
+      Clean my room and do other chores
+      Play board games
+      Code
+      Do homework
+    </pre>
+  </p> 
+
+</div>
+
+<div id="Family" class="tabcontent">
+  <h3> Family </h3>
+  <p>
+    <h5> I spend a lot of time with my family </h5>
+    <pre>
+     We cook together
+     Watch TV together
+     And I help my younger sister with her homework 
+    </pre> 
+  </p>
+</div>
+
+<div id="Pets" class="tabcontent">
+  <p><h3>Pets</h3></p>
+  <p> 
+    I like to take my dogs outside on walks to get some exercise and a break from the indoors
+  </p>
+</div>
+
+<div id="Friends" class="tabcontent">
+  <p><h3>Friends</h3></p>
+  <p> Because I am very social, my friends and I plan to facetime often! </p>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
